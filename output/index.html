@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CybeGloss - Your Cybersecurity Glossary</title>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CybeGloss - Your Cybersecurity Glossary</title>
+<link rel="icon" type="image/x-icon" href="https://examplecompany.com/images/favicon.ico">
+
+    
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+
+<style>
+    :root {
+        --primary-color: #6a4dff;
+        --secondary-color: #f3f4f6;
+        --background-color: #ffffff;
+        --text-color: #111827;
+        --accent-color: #fbbf24;
+        --font-primary: Inter, Arial, sans-serif;
+        --font-secondary: Poppins, Arial, sans-serif;
+    }
+
+    /* General styles */
+    body {
+        font-family: var(--font-primary);
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Header styles */
+    header {
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+        font-family: var(--font-secondary);
+    }
+
+    .logo img{
+        height: 80px;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .grow-btn {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    /* Alphabet navigation */
+    .alphabet-nav {
+        position: sticky;
+        top: 60px;
+        background-color: var(--secondary-color);
+        padding: 10px 0;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .alphabet-nav a {
+        margin: 2px;
+        text-decoration: none;
+        color: var(--primary-color);
+        flex: 0 0 auto;
+    }
+
+    /* Main content */
+    main {
+        flex-grow: 1;
+        padding: 2rem 0;
+    }
+
+    .category-section {
+        margin-bottom: 30px;
+    }
+
+    /* Search container */
+    #search-container {
+        margin-bottom: 20px;
+    }
+
+    #search-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: 1px solid var(--secondary-color);
+    }
+
+    #search-results {
+        margin-top: 10px;
+    }
+
+    /* Typography */
+    h1, h2 {
+        color: var(--primary-color);
+        font-family: var(--font-secondary);
+    }
+
+    /* List styles */
+    .homeMain ul {
+        padding-left: 0;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .homeMain ul li a {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+    .homeMain ul li a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--accent-color);
+        text-decoration-thickness: 5px;
+        text-underline-offset: 2px;
+    }
+
+    /* Link styles */
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+
+        .alphabet-nav {
+            top: 58px;
+        }
+
+        ul {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+    <div class="logo"><a href="/"><img src="https://examplecompany.com/images/logo.svg" /></a></div>
+    <nav>
+        <a href="https://examplecompany.com/">Home</a>
+    </nav>
+    <a class="grow-btn" href="https://examplecompany.com/auth">Get Started</a>
+</header>
+    <main class="homeMain">
+        <h1>CyberSecurity Glossary</h1>
+        <p>A comprehensive resource for cybersecurity definitions and concepts.</p>
+
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for terms...">
+            <div id="search-results"></div>
+        </div>
+
+        <div id="content">
+            
+                
+                    <h2><a href="/solar-panels/">Solar Panels</a></h2>
+                    <ul>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                    </ul>
+                
+                    <h2><a href="/wind-turbines/">Wind Turbines</a></h2>
+                    <ul>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                    </ul>
+                
+                    <h2><a href="/geothermal/">Geothermal</a></h2>
+                    <ul>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                            <li><a href="/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/">Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices</a></li>
+                        
+                    </ul>
+                
+            
+    </div>
+    </main>
+    <footer>
+    <div class="logo">
+        <a href="/">
+            <img src="https://examplecompany.com/images/logo.svg" alt="{{ProjectName}} Logo" />
+        </a>
+    </div>
+    <div class="footer-content">
+        <div class="copyright">
+            © Copyright 2022 - 2023 company.
+        </div>
+        <nav class="footer-nav">
+            <a href="https://examplecompany.com/">Home</a>
+            
+                
+                    <a href="https://twitter.com/examplecompany" target="_blank" rel="noopener noreferrer">
+                        Twitter
+                    </a>
+                
+                    <a href="https://www.linkedin.com/company/examplecompany" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                
+                    <a href="https://www.instagram.com/example_company/" target="_blank" rel="noopener noreferrer">
+                        Instagram
+                    </a>
+                
+            
+        </nav>
+    </div>
+</footer>
+    <script>
+        // Prepare data for Fuse.js
+        const searchData = [
+            
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Solar Panels',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Are you ready to embrace sustainable living and reduce your carbon footprint? Discover the top 10 renewable energy solutions for your home that not only help the environment but also save you money in the long run. From solar panels and wind turbines to energy-efficient appliances and geothermal heating, this comprehensive guide will explore innovative practices and technologies that make eco-friendly living accessible and practical. Whether you&#39;re a seasoned eco-warrior or just starting your journey towards sustainability, you&#39;ll find valuable insights and actionable tips to transform your home into a green powerhouse. Join us as we delve into the best renewable energy options that can enhance your lifestyle while protecting our planet for future generations.'
+                    },
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Solar Panels',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Welcome to our comprehensive guide on the &#34;Top 10 Renewable Energy Solutions for Your Home,&#34; where sustainable living practices meet practical applications! As the demand for eco-friendly energy sources continues to rise, homeowners are increasingly looking for ways to reduce their carbon footprint while saving on energy costs. In this article, you’ll discover a variety of innovative and accessible renewable energy solutions, from solar panels and wind turbines to energy-efficient appliances and smart home technology. Whether you’re a seasoned environmentalist or just starting your journey towards sustainable living, our curated list will empower you to make informed decisions that benefit both your home and the planet. Dive in to learn how these solutions can transform your lifestyle and contribute to a greener future!'
+                    },
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Solar Panels',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Welcome to our guide on the &#34;Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices,&#34; where you’ll discover practical ways to harness clean energy and reduce your carbon footprint. As the world shifts towards greener alternatives, implementing renewable energy solutions at home not only contributes to environmental conservation but also leads to significant savings on utility bills. From solar panels and wind turbines to energy-efficient appliances and smart home technologies, this resource will equip you with essential insights to make informed choices for a more sustainable lifestyle. Join us on this journey to a more eco-friendly home and learn how you can be part of the solution today!'
+                    },
+                
+            
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Wind Turbines',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Are you ready to transform your home into a sustainable haven? Discover the top 10 renewable energy solutions that can power your home while protecting the planet. This comprehensive guide explores innovative practices like solar panels, wind turbines, and geothermal heating, offering practical tips to enhance energy efficiency and reduce your carbon footprint. Whether you&#39;re looking to save on energy bills or contribute to a greener future, our expert insights will help you choose the best renewable energy options tailored to your lifestyle. Join us on the journey to sustainable living and unlock the benefits of eco-friendly energy solutions today!'
+                    },
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Wind Turbines',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Are you ready to embrace a greener lifestyle? Discover the top 10 renewable energy solutions for your home and learn how these sustainable living practices can transform your energy consumption. From solar panels and wind turbines to energy-efficient appliances and smart home technology, this guide provides practical insights and tips to help you reduce your carbon footprint, save on energy bills, and create a more eco-friendly environment. Join the movement towards sustainable living and empower yourself with the knowledge to make informed choices for a cleaner, healthier planet.'
+                    },
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Wind Turbines',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Are you looking to embrace sustainable living practices while reducing your carbon footprint? Discover the &#34;Top 10 Renewable Energy Solutions for Your Home&#34; and unlock the potential of eco-friendly energy sources. From solar panels that harness the sun&#39;s power to wind turbines that generate clean electricity, this guide will introduce you to innovative and practical ways to make your home more energy-efficient. Learn how these renewable energy solutions can not only lower your utility bills but also contribute to a healthier planet. Join us on the journey to a greener lifestyle and explore how you can implement these sustainable practices today!'
+                    },
+                
+            
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Geothermal',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Welcome to our comprehensive guide on the Top 10 Renewable Energy Solutions for Your Home, where sustainable living practices meet practical innovation. In an era where environmental consciousness is more important than ever, discovering effective ways to harness renewable energy can significantly reduce your carbon footprint and save on energy costs. From solar panels and wind turbines to geothermal heating and energy-efficient appliances, this page will explore various eco-friendly options that empower homeowners to embrace sustainability. Join us as we delve into each solution, providing insights, benefits, and tips to help you make informed decisions for a greener, more sustainable lifestyle.'
+                    },
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Geothermal',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Welcome to our comprehensive guide on the &#34;Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices.&#34; In an era where environmental concerns are at the forefront, adopting renewable energy solutions can significantly reduce your carbon footprint and lower your energy bills. This page will explore a variety of eco-friendly options, including solar panels, wind turbines, and geothermal heating, along with practical tips for implementing these sustainable practices in your daily life. Whether you&#39;re a homeowner looking to make a positive impact or simply curious about clean energy innovations, you&#39;ll find valuable insights to help you embrace a greener lifestyle and contribute to a healthier planet.'
+                    },
+                
+                    {
+                        title: 'Top 10 Renewable Energy Solutions for Your Home: Sustainable Living Practices',
+                        category: 'Geothermal',
+                        url: '/top-10-renewable-energy-solutions-for-your-home-sustainable-living-practices/',
+                        content: 'Welcome to our comprehensive guide on the &#34;Top 10 Renewable Energy Solutions for Your Home,&#34; where we explore sustainable living practices that can transform your household into an eco-friendly haven. As climate change awareness grows, more homeowners are seeking effective ways to reduce their carbon footprint and save on energy costs. In this article, you&#39;ll discover innovative renewable energy options such as solar panels, wind turbines, and geothermal systems, along with practical tips for implementing these solutions in your daily life. Whether you&#39;re looking to enhance your home&#39;s energy efficiency or simply want to embrace a greener lifestyle, our expert insights will empower you to make informed decisions for a sustainable future.'
+                    },
+                
+            
+        ];
+
+        // Initialize Fuse with the search data
+        const fuse = new Fuse(searchData, {
+            keys: ['title', 'category', 'content'],
+            threshold: 0.3,
+            includeScore: true
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const content = document.getElementById('content');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value;
+            if (query.length > 2) {
+                const results = fuse.search(query);
+                displayResults(results);
+            } else {
+                searchResults.innerHTML = '';
+                content.style.display = 'block';
+            }
+        });
+
+        function displayResults(results) {
+            if (results.length === 0) {
+                searchResults.innerHTML = '<p>No results found.</p>';
+                content.style.display = 'none';
+                return;
+            }
+
+            let html = '<ul>';
+            results.forEach(result => {
+                html += `<li><a href="${result.item.url}">${result.item.title}</a> (${result.item.category})</li>`;
+            });
+            html += '</ul>';
+
+            searchResults.innerHTML = html;
+            content.style.display = 'none';
+        }
+
+        // Smooth scrolling for alphabet navigation
+        document.querySelectorAll('.alphabet-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

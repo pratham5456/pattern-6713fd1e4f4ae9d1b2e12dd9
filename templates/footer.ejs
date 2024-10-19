@@ -1,0 +1,22 @@
+<footer>
+    <div class="logo">
+        <a href="<%= logoLink %>">
+            <img src="<%= logoImgUrl %>" alt="<%= projectName %> Logo" />
+        </a>
+    </div>
+    <div class="footer-content">
+        <div class="copyright">
+            <%- copyrightText %>
+        </div>
+        <nav class="footer-nav">
+            <a href="<%= homeLink %>">Home</a>
+            <% if (socialLinks && socialLinks.length > 0) { %>
+                <% socialLinks.forEach(function(social) { %>
+                    <a href="<%= social.url %>" target="_blank" rel="noopener noreferrer">
+                        <%= social.platform %>
+                    </a>
+                <% }); %>
+            <% } %>
+        </nav>
+    </div>
+</footer>

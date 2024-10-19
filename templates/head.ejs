@@ -1,0 +1,184 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= portalTitle %></title>
+<link rel="icon" type="image/x-icon" href="<%= faviconUrl %>">
+<% if (fonts && fonts.length > 0) { %>
+    <% fonts.forEach(function(font) { %>
+        <link href="https://fonts.googleapis.com/css2?family=<%= font.family.replace(' ', '+') %>:wght@<%= font.weights.join(';') %>&display=swap" rel="stylesheet">
+    <% }); %>
+<% } %>
+<style>
+    :root {
+        --primary-color: <%= theme.primaryColor %>;
+        --secondary-color: <%= theme.secondaryColor %>;
+        --background-color: <%= theme.backgroundColor %>;
+        --text-color: <%= theme.textColor %>;
+        --accent-color: <%= theme.accentColor %>;
+        --font-primary: <%= fonts[0].family %>, Arial, sans-serif;
+        --font-secondary: <%= fonts[1] ? fonts[1].family : fonts[0].family %>, Arial, sans-serif;
+    }
+
+    /* General styles */
+    body {
+        font-family: var(--font-primary);
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Header styles */
+    header {
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+        font-family: var(--font-secondary);
+    }
+
+    .logo img{
+        height: 80px;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .grow-btn {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    /* Alphabet navigation */
+    .alphabet-nav {
+        position: sticky;
+        top: 60px;
+        background-color: var(--secondary-color);
+        padding: 10px 0;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .alphabet-nav a {
+        margin: 2px;
+        text-decoration: none;
+        color: var(--primary-color);
+        flex: 0 0 auto;
+    }
+
+    /* Main content */
+    main {
+        flex-grow: 1;
+        padding: 2rem 0;
+    }
+
+    .category-section {
+        margin-bottom: 30px;
+    }
+
+    /* Search container */
+    #search-container {
+        margin-bottom: 20px;
+    }
+
+    #search-input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: 1px solid var(--secondary-color);
+    }
+
+    #search-results {
+        margin-top: 10px;
+    }
+
+    /* Typography */
+    h1, h2 {
+        color: var(--primary-color);
+        font-family: var(--font-secondary);
+    }
+
+    /* List styles */
+    .homeMain ul {
+        padding-left: 0;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .homeMain ul li a {
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+
+    .homeMain ul li a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--accent-color);
+        text-decoration-thickness: 5px;
+        text-underline-offset: 2px;
+    }
+
+    /* Link styles */
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+
+        .alphabet-nav {
+            top: 58px;
+        }
+
+        ul {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
